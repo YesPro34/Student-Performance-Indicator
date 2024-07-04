@@ -1,1 +1,1 @@
-## End To End Machibe Learning Project - Student Performance Indicator
+## End To End Machine Learning Project - Student Performance Indicator
