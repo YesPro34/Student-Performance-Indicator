@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Montserrat';
+   
+}
+
+.nav-bar{
+    background-color: #fff;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 0 7px 0;
+}
+
+.nav-bar img{
+    width: 180px;
+    height: 80px;
+}
+
+.content-section{
+    height: 100vh;
+    background-color: #e9e6e0;
+    position: relative;
+    z-index: 5px;
+    margin-top: 0;
+   
+}
+
+.slider {
+    width: 90%;
+    max-height: 650px;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+
+.form-content {
+    position: absolute;
+    width: 47%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+.first-four-fields{
+    position: relative;
+    display: flex;
+    gap: 40px;
+}
+
+.other-three-fields{
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+    width: max-content;
+}
+
+p{
+    margin-bottom: 8px;
+}
+
+.form-control{
+    margin-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: solid 1px #014979;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.reading-from{
+    width: 150px;
+}
+.writing-from{
+    width: 150px;
+}
+
+.mb-button{
+    position: absolute;
+    top: 80%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+}
+
+.btn{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #014979;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+.result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    margin-top: 30px;
+}

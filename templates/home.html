@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login">
+        <div class="nav-bar">
+            <img src="{{url_for('static',filename='logo.png')}}" alt="">
+            <h1>Student Exam Performance Indicator</h1>
+        </div>
+        
+        <div class="content-section">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="{{ url_for('static', filename='img1.jpg') }}" alt="Image 1"></div>
+                    <div class="slide"><img src="{{ url_for('static', filename='img2.jpg') }}" alt="Image 2"></div>
+                    <div class="slide"><img src="{{ url_for('static', filename='img3.jpg') }}" alt="Image 3"></div>
+                </div>
+            </div>
+
+            <div class="form-content">
+                <form action="{{ url_for('predict_datapoint')}}" method="post">
+                 <!-- first four fields -->
+                <div class="first-four-fields">
+                    <div class="mb-3">
+                        <p>Gender</p>
+                        <select class="form-control" name="gender" placeholder="Enter you Gender" required>
+                            <option class="placeholder" selected disabled value="">Select your Gender</option>
+                            <option value="male">
+                                Male
+                            </option>
+                            <option value="female">
+                                Female
+                            </option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <p class="form-p">Race or Ethnicity</p>
+                        <select class="form-control" name="ethnicity" placeholder="Enter you ethnicity" required>
+                            <option class="placeholder" selected disabled value="">Select Ethnicity</option>
+                            <option value="group A">
+                                Group A
+                            </option>
+                            <option value="group B">
+                                Group B
+                            </option>
+                            <option value="group C">
+                                Group C
+                            </option>
+                            <option value="group D">
+                                Group D
+                            </option>
+                            <option value="group E">
+                                Group E
+                            </option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <p class="form-p">Parental Level of Education</p>
+                        <select class="form-control" name="parental_level_of_education"
+                            placeholder="Enter you Parent Education" required>
+                            <option class="placeholder" selected disabled value="">Select Parent Education</option>
+                            <option value="associate's degree">
+                                associate's degree
+                            </option>
+                            <option value="bachelor's degree">
+                                bachelor's degree
+                            </option>
+                            <option value="high school">
+                                high school
+                            </option>
+                            <option value="master's degree">
+                                master's degree
+                            </option>
+                            <option value="some college">
+                                some college
+                            </option>
+                            <option value="some high school">
+                                some high school
+                            </option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <p class="form-p">Lunch Type</p>
+                        <select class="form-control" name="lunch" placeholder="Enter you Lunch" required>
+                            <option class="placeholder" selected disabled value="">Select Lunch Type</option>
+                            <option value="free/reduced">
+                                free/reduced
+                            </option>
+                            <option value="standard">
+                                standard
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- other three fields -->
+                 <div class="other-three-fields">
+                     <div class="mb-3">
+                         <p class="form-p">Test preparation Course</p>
+                         <select class="form-control" name="test_preparation_course" placeholder="Enter you Course"
+                             required>
+                             <option class="placeholder" selected disabled value="">Select Test_course</option>
+                             <option value="none">
+                                 None
+                             </option>
+                             <option value="completed">
+                                 Completed
+                             </option>
+                         </select>
+                     </div>
+                     <div class="mb-3">
+                         <p class="form-p">Writing Score out of 100</p>
+                         <input class="form-control reading-from" type="number" name="reading_score"
+                             placeholder="Enter your Reading score" min='0' max='100' />
+                     </div>
+                     <div class="mb-3">
+                         <p class="form-p">Reading Score out of 100</p>
+                         <input class="form-control writing-from" width="400px" type="number" name="writing_score"
+                             placeholder="Enter your Reading Score" min='0' max='100' />
+                     </div>
+                    </div>
+                    <!-- the button -->
+                    <div class="mb-button">
+                        <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required />
+                    </div>
+            </form>
+            </div>
+        <div class="result">
+            <h2>
+                Your predicted math score is {{results}}
+            </h2>
+
+        </div>
+    </div>
+    
+</body>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>
+

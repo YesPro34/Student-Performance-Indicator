@@ -41,9 +41,9 @@ class ModelTrainer:
             )
 
             models = {
-                "Random Forest": RandomForestRegressor(),
-                "Decision Tree": DecisionTreeRegressor(),
-                "Gradient Boosting": GradientBoostingRegressor(),
+                # "Decision Tree": DecisionTreeRegressor(),
+                # "Random Forest": RandomForestRegressor(),
+                # "Gradient Boosting": GradientBoostingRegressor(),
                 "Linear Regression": LinearRegression(),
                 "K-Neighbors Classifier": KNeighborsRegressor(),
                 "XGBClassifier": XGBRegressor(),
@@ -86,8 +86,9 @@ class ModelTrainer:
             models_report:dict = evaluate_models(X_train=X_train,X_test=X_test,y_train=y_train,y_test=y_test,models=models, param=params)
 
             # get the best model score and name from models_report
-            best_model_score = max(sorted(models_report.values()))
-            best_model_name = list(models_report.keys())[list(models_report.values()).index(best_model_score)]
+            # get the best model score and name from models_report
+            best_model_score = max(models_report.values())
+            best_model_name = [name for name, score in models_report.items() if score == best_model_score][0]
             best_model = models[best_model_name]
 
             if best_model_score < 0.6:
