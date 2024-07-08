@@ -32,10 +32,7 @@ def predict_datapoint():
             reading_score = float(request.form.get('reading_score')),
             writing_score = float(request.form.get('writing_score')),
         )
-
         pred_df = data.get_data_as_dataframe()
-        print(pred_df)
-
         prediction_pipeline = PredictionPipeline()
         prediction_result = prediction_pipeline.predict(pred_df)
 
