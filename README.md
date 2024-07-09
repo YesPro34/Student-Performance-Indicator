@@ -26,11 +26,9 @@ There are 7 independent variables :
 render.com deployement link: [Deployment](https://student-performance-indicator-bl70.onrender.com)
 
 ### Screenshot of UI
-![Homepage UI](path_to_ui_screenshot)
+![Homepage UI](https://github.com/YesPro34/Student-Performance-Indicator/blob/main/screenshots/homepage.png)
 
 
-### Postman Testing of API
-![API Prediction](path_to_api_screenshot)
 
 ## Approach for the Project
 
